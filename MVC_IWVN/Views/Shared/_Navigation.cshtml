@@ -1,0 +1,212 @@
+﻿
+<div class="left_col scroll-view">
+    <!-- menu profile quick info -->
+    <div class="profile clearfix">
+        <div class="profile_pic">
+            <img src="~/Uploads/Images/logo.png" alt="..." class="img-circle profile_img">
+        </div>
+        <div class="profile_info">
+            <span>@Resources.Content.Welcome,</span>
+            <h2>
+                @if (Session["UserName"] != null)
+                {
+                    @Session["UserName"].ToString()
+                }
+            </h2>
+        </div>
+    </div>
+    <!-- /menu profile quick info -->
+
+    <br />
+
+    <!-- sidebar menu -->
+    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+        <div class="menu_section">
+            <h3>@Resources.Content.Function </h3>
+            <ul class="nav side-menu">
+                @if (MVC_IWVN.Common.setRole.Role_homePage_view)
+                {
+                    <li>
+                        <a href="/Home/ManagermentDashBoard">
+                            <i class="fa fa-home"></i>
+                            @Resources.Content.HomePage
+                        </a>
+                    </li>
+                }
+                @if (MVC_IWVN.Common.setRole.Role_HR_view)
+                {
+                    <li>
+                        <a><i class="fa fa-users"></i>@Resources.Content.Employee <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="/Employee/Index">@Resources.Content.Employee</a></li>
+                            <li>
+                                <a>@Resources.Content.Reward & @Resources.Content.Discipline<span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li class="sub_menu">
+                                        <a href="/Reward/Index">@Resources.Content.Reward</a>
+                                    </li>
+                                    <li class="sub_menu">
+                                        <a href="/Discipline/Index">@Resources.Content.Discipline</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a>@Resources.Content.OnLeave - @Resources.Content.Overtime<span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li class="sub_menu">
+                                        <a href="/Leave/Index">@Resources.Content.OnLeave</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Overtime/Index">@Resources.Content.Overtime</a>
+                                    </li>
+                                    <li>
+                                        <a href="/AnnualLeave/Index">@Resources.Content.AnnualLeave</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <a>@Resources.Content.Timekeeping<span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li class="sub_menu">
+                                        <a href="/Timesheets/Index">@Resources.Content.Timesheets</a>
+                                    </li>
+                                    <li class="sub_menu">
+                                        <a href="/HistoryTimekeeping/Index">@Resources.Content.TimekeepingHistory</a>
+                                    </li>
+                                    <li>
+                                        <a href="/EmployeeCard/Index">@Resources.Content.RegisCard</a>
+                                    </li>
+                                    <li>
+                                        <a href="/ShiftArrange/Index">@Resources.Content.ShiftArrange</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                }
+                @if (MVC_IWVN.Common.setRole.Role_Salary_view)
+                {
+                    <li>
+                        <a><i class="fa fa-usd"></i> @Resources.Content.Salary <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="/SalarySheet/Index">@Resources.Content.SalarySheet</a></li>
+                            <li><a href="/Allowance/Index">@Resources.Content.Salary & @Resources.Content.Allowance</a></li>
+                        </ul>
+                    </li>
+                }
+                @if (MVC_IWVN.Common.setRole.Role_Contract_view)
+                {
+                    <li>
+                        <a><i class="fa fa-file-text"></i> @Resources.Content.Contract <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="/Contract/Index">@Resources.Content.Contract</a></li>
+                        </ul>
+                    </li>
+                }
+
+
+            </ul>
+        </div>
+        <div class="menu_section">
+            <h3>@Resources.Content.Category</h3>
+            <ul class="nav side-menu">
+                @if (MVC_IWVN.Common.setRole.Role_HRCategory_view)
+                {
+                    <li>
+                        <a><i class="fa fa-users"></i> @Resources.Content.CategoryHR <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li>
+                                <a>@Resources.Content.Category<span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li class="sub_menu">
+                                        <a href="/Company/Index">@Resources.Content.Company</a>
+                                    </li>
+                                    <li class="sub_menu">
+                                        <a href="/Department/Index">@Resources.Content.Department</a>
+                                    </li>
+                                    <li>
+                                        <a href="/Position/Index">@Resources.Content.Position</a>
+                                    </li>
+                                    <li><a href="/Degree/Index">@Resources.Content.Degree</a></li>
+                                    <li><a href="/Nationality/Index">@Resources.Content.Nationality</a></li>
+                                    <li><a href="/Nation/Index">@Resources.Content.Nation</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>@Resources.Content.OnLeave<span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li class="sub_menu">
+                                        <a href="/Holiday/Index">@Resources.Content.Holidays</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>@Resources.Content.Timekeeping<span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li class="sub_menu">
+                                        <a href="/TimekeepingMachine/Index">@Resources.Content.TimekeepingMachine</a>
+                                    </li>
+                                    <li class="sub_menu">
+                                        <a href="/WorkingShift/Index">@Resources.Content.WorkingShift</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                }
+                @if (MVC_IWVN.Common.setRole.Role_ContractCategory_view)
+                {
+                    <li>
+                        <a><i class="fa fa-file-pdf-o"></i> @Resources.Content.CategoryContract <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="/TypeContract/Index">@Resources.Content.TypeContract</a>
+                        </ul>
+                    </li>
+                }
+                @if (MVC_IWVN.Common.setRole.Role_SalaryCategory_view)
+                {
+                    <li>
+                        <a><i class="fa fa-dollar"></i> @Resources.Content.CategorySalary <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="/AllowanceCategory/Index">@Resources.Content.Allowance</a>
+                            <li><a href="/SalaryFormular/Index">@Resources.Content.SalaryFormular</a>
+                        </ul>
+                    </li>
+                }
+
+                @if (MVC_IWVN.Common.setRole.Role_System_view)
+                {
+                    <li>
+                        <a><i class="fa fa-cog"></i> @Resources.Content.System <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a href="/SysLog/Index">@Resources.Content.SystemLog</a>
+                            <li><a href="/User/Index">@Resources.Content.UserAccount</a>
+                        </ul>
+                    </li>
+                }
+
+            </ul>
+        </div>
+
+    </div>
+    <!-- /sidebar menu -->
+    <!-- /menu footer buttons -->
+    <div class="sidebar-footer hidden-small">
+        <a data-toggle="tooltip" data-placement="top" title="Settings">
+            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+        </a>
+        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+            <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+        </a>
+        <a data-toggle="tooltip" data-placement="top" title="Lock">
+            <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+        </a>
+        <a data-toggle="tooltip" data-placement="top" title="Logout" href="/Home/LogOut">
+            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+        </a>
+    </div>
+    <!-- /menu footer buttons -->
+</div>

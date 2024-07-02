@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- top tiles -->
+<div class="row" style="display: inline-block;">
+    <div class="tile_count">
+        <div class="col-md-3 col-sm-4  tile_stats_count" style="width:250px">
+            <span class="count_top"><i class="fa fa-user"></i> @Resources.Content.TotalEmployee</span>
+            <div class="count">@ViewBag.TotalEmployee</div>
+        </div>
+        <div class="col-md-3 col-sm-4  tile_stats_count" style="width:300px">
+            <span class="count_top"><i class="fa fa-clock-o"></i> @Resources.Content.TotalBirthdayInMonth</span>
+            <div class="count">@ViewBag.BirthdayInMonth</div>
+            @*<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>*@
+        </div>
+        <div class="col-md-3 col-sm-4  tile_stats_count" style="width:300px">
+            <span class="count_top"><i class="fa fa-user"></i> @Resources.Content.ContractExpirationInMonth</span>
+            <div class="count red">@ViewBag.ContractExpire</div>
+            @*<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>*@
+        </div>
+        <div class="col-md-3 col-sm-4  tile_stats_count" style="width:300px">
+            <span class="count_top"><i class="fa fa-user"></i> @Resources.Content.ContractExpirationInNextMonth</span>
+            <div class="count green">@ViewBag.ContractExpireNextMonth</div>
+            @*<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>*@
+        </div>
+
+    </div>
+
+    <div class="tile_count">
+        <div class="col-md-3 col-sm-4  tile_stats_count" style="width:250px">
+            <span class="count_top"><i class="fa fa-user"></i> @Resources.Content.QtyLeaveInDay</span>
+            <div class="count green">@ViewBag.TotalCountLeaveOnDay</div>
+            @*<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>*@
+        </div>
+        <div class="col-md-3 col-sm-4  tile_stats_count" style="width:250px">
+            <span class="count_top"><i class="fa fa-user"></i> @Resources.Content.StaffArrangedShiftsInMonth</span>
+            <div class="count green">@ViewBag.EmployeeShift</div>
+            @*<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>*@
+        </div>
+    </div>
+</div>
+

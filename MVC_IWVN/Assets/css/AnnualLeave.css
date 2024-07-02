@@ -1,0 +1,12 @@
+﻿
+.columnEmployeeAnnualLeave {
+    float: left;
+    width: 60%;
+    padding: 5px;
+}
+
+.columnAnnualLeaveDetail {
+    float: left;
+    width: 40%;
+    padding: 5px;
+}
