@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="IWVNModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="IWVNModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tblAllowance">
           <Key>
             <PropertyRef Name="ID" />
@@ -187,18 +187,18 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EmployeeCode" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
-          <Property Name="FullName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="CommonName" Type="nvarchar" MaxLength="50" />
           <Property Name="Gender" Type="bit" Nullable="false" />
           <Property Name="Images" Type="nvarchar" MaxLength="255" />
           <Property Name="Birthday" Type="date" />
           <Property Name="PlaceOfBirth" Type="nvarchar" MaxLength="50" />
           <Property Name="Married" Type="bit" />
-          <Property Name="Address" Type="nvarchar" MaxLength="100" />
-          <Property Name="AddressTmp" Type="nvarchar" MaxLength="100" />
+          <Property Name="Address" Type="nvarchar" MaxLength="500" />
+          <Property Name="AddressTmp" Type="nvarchar(max)" />
           <Property Name="Phone" Type="varchar" MaxLength="20" />
-          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
           <Property Name="CCCD" Type="nvarchar" MaxLength="50" />
           <Property Name="DateCCCD" Type="datetime" />
           <Property Name="IssuedBy" Type="nvarchar" MaxLength="50" />
@@ -233,8 +233,8 @@
           <Property Name="NoBHYT" Type="nvarchar" MaxLength="50" />
           <Property Name="fromDateBHYT" Type="datetime" />
           <Property Name="toDateBHYT" Type="datetime" />
-          <Property Name="ProvinceBHYT" Type="nvarchar" MaxLength="50" />
-          <Property Name="HopitalBHYT" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProvinceBHYT" Type="nvarchar" MaxLength="200" />
+          <Property Name="HopitalBHYT" Type="nvarchar" MaxLength="200" />
           <Property Name="isActive" Type="bit" />
           <Property Name="LeaderID" Type="int" />
           <Property Name="ManagerID" Type="int" />
@@ -885,8 +885,7 @@
           <EntitySet Name="tblWorkingShift" EntityType="Self.tblWorkingShift" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="IWVNModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1072,18 +1071,18 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="EmployeeCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="CommonName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Gender" Type="Boolean" Nullable="false" />
           <Property Name="Images" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="Birthday" Type="DateTime" Precision="0" />
           <Property Name="PlaceOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Married" Type="Boolean" />
-          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="AddressTmp" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="AddressTmp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="CCCD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DateCCCD" Type="DateTime" Precision="3" />
           <Property Name="IssuedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -1118,8 +1117,8 @@
           <Property Name="NoBHYT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="fromDateBHYT" Type="DateTime" Precision="3" />
           <Property Name="toDateBHYT" Type="DateTime" Precision="3" />
-          <Property Name="ProvinceBHYT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="HopitalBHYT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProvinceBHYT" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="HopitalBHYT" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="isActive" Type="Boolean" />
           <Property Name="LeaderID" Type="Int32" />
           <Property Name="ManagerID" Type="Int32" />

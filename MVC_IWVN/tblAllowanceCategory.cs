@@ -11,15 +11,12 @@ namespace MVC_IWVN
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tblAllowanceCategory
     {
         public int ID { get; set; }
         public string AllowanceNameVN { get; set; }
         public string AllowanceNameEN { get; set; }
-
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> Money { get; set; }
         public Nullable<bool> isActive { get; set; }
         public Nullable<System.DateTime> DateCreated { get; set; }

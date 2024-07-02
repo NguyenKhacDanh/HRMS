@@ -11,38 +11,25 @@ namespace MVC_IWVN
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tblSalarySheetDetail
     {
         public int ID { get; set; }
         public Nullable<int> EmployeeID { get; set; }
         public Nullable<int> SalarySheetID { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> BasicSalary { get; set; }
         public Nullable<int> TimesheetDetailID { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> MoneyWork { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> MoneyOvertime { get; set; }
         public Nullable<double> MoneySunday { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> MoneyHoliday { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> MoneyUnpaidLeave { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> MoneyPadLeave { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> BHXH { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> BHYT { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> BHTN { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> UnionDues { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> TotalAllowance { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> TotalSalary { get; set; }
         public Nullable<System.DateTime> DateCreate { get; set; }
         public string UserCreate { get; set; }
