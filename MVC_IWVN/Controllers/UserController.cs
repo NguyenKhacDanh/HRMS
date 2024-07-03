@@ -20,7 +20,7 @@ namespace MVC_IWVN.Controllers
         // GET: User
         public ActionResult Index()
         {
-            if (ModelState.IsValid && Session["UserID"] != null)
+            if (ModelState.IsValid && Session["UserID"] != null) 
             {
                 using (IWVNEntities db = new IWVNEntities())
                 {
