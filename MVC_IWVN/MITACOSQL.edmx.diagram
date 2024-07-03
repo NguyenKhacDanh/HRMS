@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="eecd42012b604beea016b784d45fb6d2" Name="Diagram1">
+        <EntityTypeShape EntityType="MITACOSQL2019Model.AAu_CaLamViec" Width="1.5" PointX="5.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.AAu_ChamCongTongHop" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.AAu_GiangVien" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.AAu_HinhThuc" Width="1.5" PointX="5.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.CACLOAIVANG" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.CALAMVIEC" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.CaLamViecNew" Width="1.5" PointX="14.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.CheckInOut" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.CheckInOut2" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.CHUCVU" Width="1.5" PointX="5.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.CHUCVUNHANVIEN" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.CONGTY" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.DanToc" Width="1.5" PointX="7.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.KhaiBaoVangChoNhanVien" Width="1.5" PointX="12.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.KHUVUC" Width="1.5" PointX="3" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.KYHIEUCHAMCONG" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.LICHTRINHCHOCALAMVIEC" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.LICHTRINHVAORA" Width="1.5" PointX="4.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.MAYCHAMCONG" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.Maychu" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.NGAY" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.NGAYLE" Width="1.5" PointX="6.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.NgayTinhCong" Width="1.5" PointX="16.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.NGUOIDUNG" Width="1.5" PointX="16.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.NHANVIEN" Width="1.5" PointX="10.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.NhanVien_Test_" Width="1.5" PointX="18.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.NhanVienChuyenPhongBan" Width="1.5" PointX="2.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.NHANVIEN1" Width="1.5" PointX="18.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.NhanVienVirtual" Width="1.5" PointX="18.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.NhatKyHeThong" Width="1.5" PointX="20.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.PhanTheoGio" Width="1.5" PointX="20.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.PhoneNumber" Width="1.5" PointX="5.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.PHONGBAN" Width="1.5" PointX="8.25" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.PHUCAP" Width="1.5" PointX="20.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.QuocTich" Width="1.5" PointX="7.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.sysdiagram" Width="1.5" PointX="20.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.TINHTHANH" Width="1.5" PointX="20.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.TrinhDo" Width="1.5" PointX="20.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.TUYCHON" Width="1.5" PointX="20.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.User" Width="1.5" PointX="22.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.ChiTietCongTruLuong" Width="1.5" PointX="0.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.ChiTietDangKyTangCa" Width="1.5" PointX="12.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.ChiTietDiCongTac" Width="1.5" PointX="12.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.ChiTietLichTrinhCaLamViec" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.CHITIETPHUCAPNHANVIEN" Width="1.5" PointX="12.75" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.CHITIETTAMUNGLUONG" Width="1.5" PointX="12.75" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.ChiTietThuongNhanVien" Width="1.5" PointX="2.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.Face" Width="1.5" PointX="12.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.GioHenTaiTuDong" Width="1.5" PointX="22.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.PHEPNAM" Width="1.5" PointX="12.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.TEMPLATE" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.TinhCong" Width="1.5" PointX="22.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.TuDongSaoLuu" Width="1.5" PointX="22.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MITACOSQL2019Model.ViPham" Width="1.5" PointX="22.75" PointY="21.75" IsExpanded="true" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_AAu_ChamCongTongHop_MaCa" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_AAu_ChamCongTongHop_MaHT" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_CheckInOut_NHANVIEN_MaChamCong" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_CHUCVU_CONGTY_MaCongTy" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_CHUCVU_KHUVUC_MaKhuVuc" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_CHUCVU_PHONGBAN_MaPhongBan" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_NHANVIEN_CHUCVU_MaChucVu" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_KHUVUC_CONGTY_MaCongTy" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_NHANVIEN_CONGTY_MaCongTy" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_PHONGBAN_CONGTY_MaCongTy" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_KhaiBaoVangChoNhanVien_NHANVIEN_MaChamCong" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_NHANVIEN_KHUVUC_MaKhuVuc" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_PHONGBAN_KHUVUC_MaKhuVuc" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_ChiTietLichTrinhCaLamViec_LICHTRINHCHOCALAMVIEC_MaLichTrinhCaLamViec" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_NGAY_LICHTRINHCHOCALAMVIEC_MaLichTrinhCaLamViec" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_ChiTietDangKyTangCa_NHANVIEN_MaChamCong" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_ChiTietDiCongTac_NHANVIEN_MaChamCong" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.fk_CHITIETPHUCAPNHANVIEN_NHANVIEN_MaChamCong" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.fk_CHITIETTAMUNGLUONG_NHANVIEN_MaChamCong" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_Face_NHANVIEN_MaChamCong" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_NHANVIEN_PHONGBAN_MaPhongBan" ManuallyRouted="false" />
+        <AssociationConnector Association="MITACOSQL2019Model.FK_PHEPNAM_NHANVIEN_MaChamCong" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
