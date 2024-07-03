@@ -52,7 +52,7 @@
 
 <body class="hold-transition login-page">
     <!-- Content -->
-
+    <!-- TEst -->
     <div class="container-xxl">
         <div class="authentication-wrapper authentication-basic container-p-y">
             <div class="authentication-inner">
@@ -69,62 +69,62 @@
                         <h4 class="mb-2">Trang đăng nhập HRMS 👋</h4>
                         @using (Html.BeginForm("Login", "Home", FormMethod.Post))
                         {
-                        @Html.AntiForgeryToken()
-                        @Html.ValidationSummary(true)
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true)
 
-                        <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
-                            <div class="mb-3">
-                                <label for="email" class="form-label">@Resources.Content.Account</label>
-                                <input type="text"
-                                       class="form-control"
-                                       id="Username"
-                                       name="Username"
-                                       placeholder=""
-                                       autofocus />
-                            </div>
-                            <div class="mb-3 form-password-toggle">
-                                <div class="d-flex justify-content-between">
-                                    <label class="form-label" for="password">@Resources.Content.Password</label>
-
-                                </div>
-                                <div class="input-group input-group-merge">
-                                    <input type="password"
-                                           id="Password"
+                            <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">@Resources.Content.Account</label>
+                                    <input type="text"
                                            class="form-control"
-                                           name="Password"
-                                           placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                           aria-describedby="password" />
-                                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                                           id="Username"
+                                           name="Username"
+                                           placeholder=""
+                                           autofocus />
                                 </div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="rememberme" />
-                                    <label class="form-check-label" for="remember-me"> @Resources.Content.Remember </label>
+                                <div class="mb-3 form-password-toggle">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="form-label" for="password">@Resources.Content.Password</label>
+
+                                    </div>
+                                    <div class="input-group input-group-merge">
+                                        <input type="password"
+                                               id="Password"
+                                               class="form-control"
+                                               name="Password"
+                                               placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                               aria-describedby="password" />
+                                        <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div id="languageSelectContainer">
-                                <select id="languageSelect" class="form-control" style="font-size: 12px">
-                                    @if (Session["lang"] != null && Session["lang"].ToString() == "vn")
-                                    {
-                                    <option value="vn" selected>Tiếng Việt - Vietnamese</option>
-                                    <option value="en">Tiếng Anh - English</option>
-                                    }
-                                    else
-                                    {
-                                    <option value="en">Tiếng Anh - English</option>
-                                    <option value="vn">Tiếng Việt - Vietnamese</option>
-                                    }
-                                </select>
-                                <br/>
-                            </div>
-                            <div class="mb-3">
-                                <button class="btn btn-primary d-grid w-100" type="submit">@Resources.Content.Login</button>
-                            </div>
-                        </form>
+                                <div class="mb-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="rememberme" />
+                                        <label class="form-check-label" for="remember-me"> @Resources.Content.Remember </label>
+                                    </div>
+                                </div>
+                                <div id="languageSelectContainer">
+                                    <select id="languageSelect" class="form-control" style="font-size: 12px">
+                                        @if (Session["lang"] != null && Session["lang"].ToString() == "vn")
+                                        {
+                                            <option value="vn" selected>Tiếng Việt - Vietnamese</option>
+                                            <option value="en">Tiếng Anh - English</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="en">Tiếng Anh - English</option>
+                                            <option value="vn">Tiếng Việt - Vietnamese</option>
+                                        }
+                                    </select>
+                                    <br />
+                                </div>
+                                <div class="mb-3">
+                                    <button class="btn btn-primary d-grid w-100" type="submit">@Resources.Content.Login</button>
+                                </div>
+                            </form>
 
                         }
-                       
+
                     </div>
                 </div>
                 <!-- /Register -->
@@ -133,9 +133,6 @@
     </div>
 
     <!-- / Content -->
-
-    
-
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="~/Template/assets/vendor/libs/jquery/jquery.js"></script>
