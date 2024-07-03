@@ -48,7 +48,7 @@ namespace MVC_IWVN.Controllers
                                historyTimekeeping = ht,
                                typeInputTimekeeping = tit,
                                position = p,
-                           };
+                           }; 
                 action.InsertActionLog(Session["UserName"].ToString(), typeLog, 6, "");
                 return View(item);
 
