@@ -284,6 +284,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AAu_CaLamViec.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AAu_ChamCongTongHop.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AAu_GiangVien.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AAu_HinhThuc.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
     <Compile Include="App_GlobalResources\Content.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -302,12 +314,57 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CACLOAIVANG.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CALAMVIEC.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CaLamViecNew.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckInOut.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CheckInOut2.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietCongTruLuong.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietDangKyTangCa.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietDiCongTac.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietLichTrinhCaLamViec.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHITIETPHUCAPNHANVIEN.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHITIETTAMUNGLUONG.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietThuongNhanVien.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHUCVU.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CHUCVUNHANVIEN.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
     <Compile Include="Common\ActionLog.cs" />
     <Compile Include="Common\EmailConfig.cs" />
     <Compile Include="Common\Encryptor.cs" />
     <Compile Include="Common\LoadData.cs" />
     <Compile Include="Common\setRole.cs" />
     <Compile Include="Common\userInfo.cs" />
+    <Compile Include="CONGTY.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AllowanceCategoryController.cs" />
     <Compile Include="Controllers\AllowanceController.cs" />
     <Compile Include="Controllers\AnnualLeaveController.cs" />
@@ -343,6 +400,15 @@
     <Compile Include="Controllers\UploadController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\WorkingShiftController.cs" />
+    <Compile Include="DanToc.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Face.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GioHenTaiTuDong.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -361,13 +427,100 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IWDataModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="KhaiBaoVangChoNhanVien.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KHUVUC.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KYHIEUCHAMCONG.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LICHTRINHCHOCALAMVIEC.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LICHTRINHVAORA.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MAYCHAMCONG.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Maychu.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MITACOSQL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MITACOSQL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MITACOSQL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MITACOSQL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MITACOSQL.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\EmployeeDetail.cs" />
     <Compile Include="Models\ViewAllowanceDetails.cs" />
     <Compile Include="Models\ViewAnnualLeaveDetails.cs" />
     <Compile Include="Models\ViewLeaveDetails.cs" />
     <Compile Include="Models\ViewModel.cs" />
     <Compile Include="Models\ViewRoleDetails.cs" />
+    <Compile Include="NGAY.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NGAYLE.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NgayTinhCong.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NGUOIDUNG.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHANVIEN.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NHANVIEN1.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVienChuyenPhongBan.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVienVirtual.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien_Test_.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhatKyHeThong.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhanTheoGio.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PHEPNAM.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PhoneNumber.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PHONGBAN.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PHUCAP.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuocTich.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
     <Compile Include="tblAllowance.cs">
       <DependentUpon>IWDataModel.tt</DependentUpon>
     </Compile>
@@ -518,8 +671,32 @@
     <Compile Include="tblWorkingShift.cs">
       <DependentUpon>IWDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="TEMPLATE.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TinhCong.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TINHTHANH.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrinhDo.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TuDongSaoLuu.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TUYCHON.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserProfile.cs">
       <DependentUpon>IWDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViPham.cs">
+      <DependentUpon>MITACOSQL.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -597,6 +774,16 @@
       <DependentUpon>IWDataModel.edmx</DependentUpon>
       <LastGenOutput>IWDataModel.cs</LastGenOutput>
     </Content>
+    <Content Include="MITACOSQL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MITACOSQL.edmx</DependentUpon>
+      <LastGenOutput>MITACOSQL.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="MITACOSQL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>MITACOSQL.edmx</DependentUpon>
+      <LastGenOutput>MITACOSQL.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -613,6 +800,13 @@
     </EntityDeploy>
     <Content Include="IWDataModel.edmx.diagram">
       <DependentUpon>IWDataModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="MITACOSQL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>MITACOSQL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="MITACOSQL.edmx.diagram">
+      <DependentUpon>MITACOSQL.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

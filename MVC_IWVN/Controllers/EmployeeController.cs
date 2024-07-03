@@ -4,6 +4,7 @@ using Microsoft.Ajax.Utilities;
 using Microsoft.AspNetCore.Http;
 using MVC_IWVN.Common;
 using MVC_IWVN.Models;
+using Newtonsoft.Json;
 using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
@@ -236,31 +237,24 @@ namespace MVC_IWVN.Controllers
                 {
                     try
                     {
-                        // TODO: Add update logic here
                         using (IWVNEntities db1 = new IWVNEntities())
                         {
-                            // Check if the employeecode already exists in the database
                             if (db1.tblEmployee.Any(e => e.EmployeeCode == employee.EmployeeCode))
                             {
-                                // Show an alert to the user indicating that the employee code is already taken
                                 ModelState.AddModelError("employee.employeecode", "Employee code already exists in the database.");
                                 SetViewBagForCreate();
                                 return View(employee);
                             }
-                            List<string> selectedForeignIDs = employee.ForeignsID;
-                            string selectedForeign = "";
-                            foreach (string item in selectedForeignIDs)
+                            if (employee.ForeignID != null && employee.ForeignID.Any())
                             {
-                                selectedForeign += item.ToString() + ",";
+                                employee.ForeignID = string.Join(",", employee.ForeignID);
                             }
-                            employee.ForeignID = selectedForeign.Substring(0, selectedForeign.Length - 1);
-                            if (employee.MaritalID == null)
-                                employee.MaritalID = 1;
-                            employee.StatusWork = 1;
 
+                            employee.StatusWork = 1;
                             employee.isActive = true;
                             employee.CreatedByDate = DateTime.Now;
                             employee.CreatedByUser = Encryptor.EncryptString(Session["UserID"].ToString());
+
                             db1.tblEmployee.Add(employee);
                             db1.SaveChanges();
                             TempData["insert"] = "Thêm mới thành công";
@@ -268,11 +262,23 @@ namespace MVC_IWVN.Controllers
                         SetViewBagForCreate();
                         action.InsertActionLog(Session["UserName"].ToString(), 7, 7, "");
                         return RedirectToAction("Index");
-
+                    }
+                    catch (DbEntityValidationException ex)
+                    {
+                        foreach (var entityValidationErrors in ex.EntityValidationErrors)
+                        {
+                            foreach (var validationError in entityValidationErrors.ValidationErrors)
+                            {
+                                Console.WriteLine("Property: {0} Error: {1}", validationError.PropertyName, validationError.ErrorMessage);
+                                ModelState.AddModelError(validationError.PropertyName, validationError.ErrorMessage);
+                            }
+                        }
+                        SetViewBagForCreate();
+                        return View(employee);
                     }
                     catch (Exception exception)
                     {
-                        string tmp = exception.Message.ToString();
+                        Console.WriteLine("Error: " + exception.Message);
                         return RedirectToAction("Index");
                     }
                 }
@@ -281,8 +287,6 @@ namespace MVC_IWVN.Controllers
             SetViewBagForCreate();
             return View(employee);
         }
-
-
         public JsonResult CheckEmployeeCode(string employeecode)
         {
             using (IWVNEntities db = new IWVNEntities())
@@ -863,7 +867,7 @@ namespace MVC_IWVN.Controllers
                          "from tblEmployee e " +
                          "left join tblDepartment dept on dept.ID = e.DepartmentID " +
                          "left join tblPosition p on p.ID = e.PositionID " +
-                         "where e.isActive = true and e.ID = " + id;
+                         "where e.isActive = 1 and e.ID = " + id;
             var item = db.Database.SqlQuery<EmployeeDetail>(sql).FirstOrDefault();
 
             return Json(item, JsonRequestBehavior.AllowGet);

@@ -11,8 +11,7 @@ namespace MVC_IWVN
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class tblISalaryFormula
     {
         public int ID { get; set; }
@@ -21,7 +20,6 @@ namespace MVC_IWVN
         public Nullable<double> BHXH { get; set; }
         public Nullable<double> BHXHMax { get; set; }
         public Nullable<double> UnionDues { get; set; }
-        [DisplayFormat(DataFormatString = "{0:N0}")]
         public Nullable<double> UnionDuesMax { get; set; }
         public Nullable<double> Overtime { get; set; }
         public Nullable<double> OvertimeSunday { get; set; }

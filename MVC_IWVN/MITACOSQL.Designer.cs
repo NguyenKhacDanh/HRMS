@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Downloads\Danh\Danh\ASP NET MVC _ HR\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\IWDataModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Downloads\Danh\Danh\ASP NET MVC _ HR\ASP NET MVC _ HR\MVC_HRM\MVC_IWVN\MITACOSQL.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

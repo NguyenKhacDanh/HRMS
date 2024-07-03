@@ -12,16 +12,17 @@ namespace MVC_IWVN
     using System;
     using System.Collections.Generic;
     
-    public partial class tblAllowanceCategory
+    public partial class CheckInOut
     {
         public int ID { get; set; }
-        public string AllowanceNameVN { get; set; }
-        public string AllowanceNameEN { get; set; }
-        public Nullable<double> Money { get; set; }
-        public Nullable<bool> isActive { get; set; }
-        public Nullable<System.DateTime> DateCreated { get; set; }
-        public string UserCreated { get; set; }
-        public Nullable<System.DateTime> DateUpdated { get; set; }
-        public string UserUpdated { get; set; }
+        public Nullable<int> MaChamCong { get; set; }
+        public Nullable<System.DateTime> NgayCham { get; set; }
+        public Nullable<System.DateTime> GioCham { get; set; }
+        public string KieuCham { get; set; }
+        public string NguonCham { get; set; }
+        public Nullable<int> MaSoMay { get; set; }
+        public string TenMay { get; set; }
+    
+        public virtual NHANVIEN NHANVIEN { get; set; }
     }
 }
