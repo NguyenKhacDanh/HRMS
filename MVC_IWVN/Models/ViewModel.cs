@@ -51,4 +51,13 @@ namespace MVC_IWVN.Models
         public tblSalarySheet salarySheet { get; set; }
 
     }
+    public class ChamCongVm
+    {
+        public long RowNumber { get; set; }
+        public int MaChamCong { get; set; }
+        public DateTime NgayCham { get; set; }
+        public DateTime GioVao { get; set; }
+        public DateTime GioRa { get; set; }
+
+    }
 }

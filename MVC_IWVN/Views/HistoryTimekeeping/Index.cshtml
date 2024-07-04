@@ -1,4 +1,5 @@
-﻿@model IEnumerable<MVC_IWVN.Models.ViewModel>
+﻿@model List<MVC_IWVN.ChamCongVm>
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,16 +10,14 @@
         <div class="title_left">
             <h3>@Resources.Content.TimekeepingHistory</h3>
         </div>
-        <div class="title_right">
-            @if (MVC_IWVN.Common.setRole.Role_HR_update)
-            {
+        <!--<div class="title_right">
+            if (MVC_IWVN.Common.setRole.Role_HR_update)
+            {-->
                 @*<a href="@Url.Action("Create","HistoryTimekeeping")" class="btn btn-info btn-xs" style="float:right"><i class="fa fa-plus"></i></a>*@
-            }
-        </div>
+            <!--}
+        </div>-->
     </div>
-
     <div class="clearfix"></div>
-
     <div class="row">
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel">
@@ -30,56 +29,21 @@
                                     <thead>
                                         <tr>
                                             <th style="display:none">ID</th>
-                                            <th>@Resources.Content.Employee</th>
-                                            <th>@Resources.Content.Department</th>
-                                            <th>@Resources.Content.TimekeepingMachine</th>
-                                            <th>@Resources.Content.Date</th>
-                                            <th>@Resources.Content.TimekeepingHour</th>
-                                            <th>@Resources.Content.Type</th>
-                                            <th>@Resources.Content.TypeData</th>
+                                            <th>Mã chấm công</th>
+                                            <th>Ngày chấm</th>
+                                            <th>Chấm vào</th>
+                                            <th>Chấm ra</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach (var item in Model)
                                         {
                                             <tr>
-                                                <td style="display: none">@Html.DisplayFor(modelItem => item.employee.ID)</td>
-                                                <td>
-                                                    <div>
-                                                        <i class="fa fa-user" style="color:darkgray"></i>
-                                                        @Html.DisplayFor(modelItem => item.employee.FirstName) @Html.DisplayFor(modelItem => item.employee.FullName)
-                                                    </div>
-                                                    <div>
-                                                        <i class="fa fa-info-circle" style="color:darkgray"></i>
-                                                        @Html.DisplayFor(modelItem => item.employee.EmployeeCode)
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div>
-                                                        <i class="fa fa-sitemap" style="color:darkgray"></i>
-                                                        @Html.DisplayFor(modelItem => item.department.NameDepartmentVN, new { @Value = ViewBag.Department })
-                                                    </div>
-                                                    <div>
-                                                        <i class="fa fa-newspaper-o" style="color:darkgray"></i>
-                                                        @Html.DisplayFor(modelItem => item.position.PositionNameVN, new { @Value = ViewBag.Department })
-                                                    </div>
-                                                </td>
-                                                <td>@Html.DisplayFor(modelItem => item.timeKeeper.TimeKeeperNameVN)</td>
-                                                <td>@Html.DisplayFor(modelItem => item.historyTimekeeping.TimekeepingDate)</td>
-                                                <td>@Html.DisplayFor(modelItem => item.historyTimekeeping.TimekeepingHour)</td>
-                                                <td>
-                                                    @if (item.historyTimekeeping.TimekeepingHour < TimeSpan.Parse("11:00"))
-                                                    {
-                                                        <i class="fa fa-sign-in" style="color:forestgreen"></i>
-                                                        <span>Chấm vào</span>
-                                                    }
-                                                    else
-                                                    {
-                                                        <i class="fa fa-sign-out" style="color:red"></i>
-                                                        <span>Chấm ra</span>
-                                                    }
-                                                </td>
-                                                <td>@Html.DisplayFor(modelItem => item.typeInputTimekeeping.TypeInputTimeKeepingVN)</td>
+                                                <td style="display: none">@Html.DisplayFor(modelItem => item.RowNumber)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.MaChamCong)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.NgayCham)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.GioVao)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.GioRa)</td>
                                             </tr>
                                         }
                                     </tbody>

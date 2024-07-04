@@ -380,6 +380,7 @@
     <Compile Include="Controllers\HistoryWorkController.cs" />
     <Compile Include="Controllers\HolidayController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KhaiBaoChiTieuVm.cs" />
     <Compile Include="Controllers\LeaveController.cs" />
     <Compile Include="Controllers\NationalityController.cs" />
     <Compile Include="Controllers\NationController.cs" />

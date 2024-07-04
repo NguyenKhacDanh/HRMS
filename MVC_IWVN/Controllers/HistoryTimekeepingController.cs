@@ -2,7 +2,9 @@
 using MVC_IWVN.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,6 +14,7 @@ namespace MVC_IWVN.Controllers
     public class HistoryTimekeepingController : Controller
     {
         IWVNEntities db = new IWVNEntities();
+        MITACOSQL2019Entities _context = new MITACOSQL2019Entities();
         LoadData loaddb = new LoadData();
         ActionLog action = new ActionLog();
         int typeLog = 66;
@@ -48,9 +51,27 @@ namespace MVC_IWVN.Controllers
                                historyTimekeeping = ht,
                                typeInputTimekeeping = tit,
                                position = p,
-                           }; 
+                           };
+                string NhanVien = "";
+                DateTime now = DateTime.Now;
+                DateTime DateFrom = new DateTime(now.Year, now.Month, 1);
+                DateTime DateTo = DateFrom.AddMonths(1).AddDays(-1);
+                var parameters = new[]
+                {
+                    new SqlParameter("@dateFrom", SqlDbType.DateTime) { Value = DateFrom },
+                    new SqlParameter("@dateTo", SqlDbType.DateTime) { Value = DateTo },
+                    new SqlParameter("@machamcongs", SqlDbType.NVarChar, 200) { Value = (object)NhanVien ?? DBNull.Value }
+                };
+                var result = _context.Database.SqlQuery<ChamCongVm>("AAu_Export_ChamCongNV @dateFrom, @dateTo, @machamcongs", parameters.ToArray()).ToList();
                 action.InsertActionLog(Session["UserName"].ToString(), typeLog, 6, "");
-                return View(item);
+                var filteredResult = result
+                        .GroupBy(r => r.MaChamCong)
+                        .Where(g => g.Any(r => (r.GioVao != null && r.GioVao != DateTime.Parse("1900-01-01 00:00:00")) ||
+                                               (r.GioRa != null && r.GioRa != DateTime.Parse("1900-01-01 00:00:00"))))
+                        .SelectMany(g => g)
+                        .ToList();
+                IEnumerable<ChamCongVm> resultEnumerable = filteredResult;
+                return View(resultEnumerable); 
 
             }
             else return RedirectToAction("Login", "Home");
