@@ -289,7 +289,7 @@
     <value>Nhân viên</value>
   </data>
   <data name="EmployeeCard" xml:space="preserve">
-    <value>Thẻ nhân viên</value>
+    <value>Mã chấm công</value>
   </data>
   <data name="EmployeeCode" xml:space="preserve">
     <value>Mã nhân viên</value>
@@ -386,6 +386,9 @@
   </data>
   <data name="JobInformaton" xml:space="preserve">
     <value>Thông tin công việc</value>
+  </data>
+  <data name="KhacDanh" xml:space="preserve">
+    <value>Khắc Danh</value>
   </data>
   <data name="Language" xml:space="preserve">
     <value>Ngôn ngữ</value>

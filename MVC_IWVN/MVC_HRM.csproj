@@ -794,6 +794,7 @@
     <EmbeddedResource Include="App_GlobalResources\Content.vn.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Content.vn.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EntityDeploy Include="IWDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -5904,6 +5905,7 @@
     <Content Include="App_GlobalResources\Content.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>Content.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>

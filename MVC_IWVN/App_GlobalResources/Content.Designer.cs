@@ -565,7 +565,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thẻ nhân viên.
+        ///   Looks up a localized string similar to Mã chấm công.
         /// </summary>
         internal static string EmployeeCard {
             get {
@@ -858,6 +858,15 @@ namespace Resources {
         internal static string JobInformaton {
             get {
                 return ResourceManager.GetString("JobInformaton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to á đù móa.
+        /// </summary>
+        internal static string KhacDanh {
+            get {
+                return ResourceManager.GetString("KhacDanh", resourceCulture);
             }
         }
         

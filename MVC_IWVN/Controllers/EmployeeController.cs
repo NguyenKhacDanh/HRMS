@@ -196,20 +196,11 @@ namespace MVC_IWVN.Controllers
         {
             if (imageFile != null && imageFile.ContentLength > 0)
             {
-                // Validate the image (optional)
-
-                // Save the image to the server
                 var fileName = Path.GetFileName(imageFile.FileName);
                 var path = Path.Combine(Server.MapPath("~/Uploads/Images/Employee"), fileName);
                 imageFile.SaveAs(path);
-
-                // Perform any other required operations
-
-                // Return a response (e.g., success message)
                 return Content("Image uploaded successfully!");
             }
-
-            // Handle the case where no image was selected
             return Content("Please select an image.");
         }
 

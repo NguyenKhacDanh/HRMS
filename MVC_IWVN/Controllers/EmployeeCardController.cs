@@ -23,7 +23,6 @@ namespace MVC_IWVN.Controllers
             if (ModelState.IsValid && Session["UserID"] != null)
             {
                 List<tblEmployeeCard> employeecards = db.tblEmployeeCard.Where(x => x.isActive == true).ToList();
-                List<tblTypeEmployeeCard> typeemployeecards = db.tblTypeEmployeeCard.Where(x => x.isActive == true).ToList();
                 List<tblEmployee> employees = db.tblEmployee.Where(x => x.isActive == true).ToList();
                 List<tblDepartment> departments = db.tblDepartment.Where(x => x.isActive == true).ToList();
                 List<tblPosition> positions = db.tblPosition.Where(x => x.isActive == true).ToList();
@@ -33,8 +32,6 @@ namespace MVC_IWVN.Controllers
                            from e in table1.ToList()
                            join d in departments on e.DepartmentID equals d.ID into table2
                            from d in table2.ToList()
-                           join te in typeemployeecards on o.TypeEmployeeCardID equals te.ID into table3
-                           from te in table3.ToList()
                            join p in positions on e.PositionID equals p.ID into table4
                            from p in table4.ToList()
                            orderby o.ID descending
@@ -43,7 +40,6 @@ namespace MVC_IWVN.Controllers
                                employee = e,
                                department = d,
                                employeecard = o,
-                               typeemployeecard = te,
                                position = p,
                            };
                 action.InsertActionLog(Session["UserName"].ToString(), typeLog, 6, "");
@@ -62,7 +58,7 @@ namespace MVC_IWVN.Controllers
                 {
                     if (Session["UserID"] != null)
                     {
-                        var item = db.tblEmployeeCard.Where(a => a.ID == id).FirstOrDefault();
+                        var item = db.tblEmployeeCard.Where(a => a.EmployeeID == id).FirstOrDefault();
                         SetViewBagForDetails(item);
                         action.InsertActionLog(Session["UserName"].ToString(), typeLog, 11, "");
                         return View(item);

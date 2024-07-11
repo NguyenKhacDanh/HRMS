@@ -83,7 +83,7 @@ namespace MVC_IWVN.Controllers
                                 }
                                 else // login thành công
                                 {
-
+                                    
                                     //Ghi lại lịch sử login
                                     obj.IPLastLogin = Common.userInfo.GetLocalIPAddress();
                                     obj.DateLastLogin = DateTime.Now;
@@ -93,6 +93,7 @@ namespace MVC_IWVN.Controllers
                                     //Ghi lại session
                                     Session["UserID"] = obj.UserId.ToString();
                                     Session["UserName"] = obj.UserName.ToString();
+                                    Session["Avatar"] = db.tblEmployee.Where(x => x.ID == obj.EmployeeID).Select(x => x.Images).FirstOrDefault();
                                     Session["EmployeeID"] = obj.EmployeeID.ToString();
                                     Session["Password"] = password;
 

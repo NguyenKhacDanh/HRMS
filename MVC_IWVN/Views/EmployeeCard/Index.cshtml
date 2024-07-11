@@ -33,8 +33,6 @@
                                             <th>@Resources.Content.Employee</th>
                                             <th>@Resources.Content.PositionWork</th>
                                             <th>@Resources.Content.EmployeeCard</th>
-                                            <th>@Resources.Content.TypeRegis</th>
-                                            <th>@Resources.Content.Note</th>
                                             <th>#</th>
                                         </tr>
                                     </thead>
@@ -63,9 +61,7 @@
                                                         @Html.DisplayFor(modelItem => item.position.PositionNameVN, new { @Value = ViewBag.Department })
                                                     </div>
                                                 </td>
-                                                <td>@Html.DisplayFor(modelItem => item.employeecard.EmployeeCardID)</td>
-                                                <td>@Html.DisplayFor(modelItem => item.typeemployeecard.TypeCardVN)</td>
-                                                <td>@Html.DisplayFor(modelItem => item.employeecard.Note)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.employeecard.EmployeeCardID)</td>>
                                                 <td>
                                                     <a href="@Url.Action("Details", "EmployeeCard", new { id = @item.employee.ID })" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i>  </a>
                                                     <a href="" class="btn btn-danger btn-xs" onclick="return confirmDelete(@item.employee.ID);"><i class="fa fa-trash-o"></i>  </a>

@@ -289,7 +289,7 @@
     <value>Employee</value>
   </data>
   <data name="EmployeeCard" xml:space="preserve">
-    <value>Employee Card</value>
+    <value>Timekeeping code</value>
   </data>
   <data name="EmployeeCode" xml:space="preserve">
     <value>Code</value>
@@ -386,6 +386,9 @@
   </data>
   <data name="JobInformaton" xml:space="preserve">
     <value>Job Informaton</value>
+  </data>
+  <data name="KhacDanh" xml:space="preserve">
+    <value>KhacDanh</value>
   </data>
   <data name="Language" xml:space="preserve">
     <value>Language</value>
